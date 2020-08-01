@@ -1,0 +1,48 @@
+$border-radius: 25px
+
+.switcher
+	@include font-size(16px)
+	font-weight: bold
+	height: 32px
+	width: 250px
+	color: #ffffff
+	background: #424242
+	border-radius: $border-radius
+	position: relative
+	cursor: pointer
+
+.switcher input
+	display: none
+	opacity: 0
+
+.switcher label
+	width: 50%
+	height: 100%
+	position: absolute
+	display: flex
+	align-items: center
+	justify-content: center
+	z-index: 2
+	cursor: pointer
+
+.first-input + label
+	left: 0
+
+.second-input + label
+	right: 0
+
+.indicator
+	position: absolute
+	left: 0%
+	z-index: 1
+	height: 100%
+	width: 50%
+	border-radius: 25px
+	background: $red
+	transition: left .4s
+
+.first-input:checked ~ .indicator
+	left: 0%
+
+.second-input:checked ~ .indicator
+	left: 50%
