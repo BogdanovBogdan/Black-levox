@@ -5,11 +5,12 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
-const terser = require("gulp-terser");
-const concat = require("gulp-concat");
-const cleanCss = require("gulp-clean-css");
+const terser = require('gulp-terser');
+const concat = require('gulp-concat');
+const cleanCss = require('gulp-clean-css');
 const del = require('del');
 const htmlreplace = require('gulp-html-replace');
+const svgSprite = require('gulp-svg-sprite');
 
 
 const prodDist = "./docs/";
@@ -22,6 +23,8 @@ const cssPath = "./src/css/*.css";
 const jsPath = "./src/js/**/script.js";
 const sassToCssPath = "./src/sass/**/*.sass";
 const copySrcPaths = ["./src/**/*.*", `!${htmlPath}`, `!${cssPath}`, `!${jsPath}`, `!${sassToCssPath}`];
+const spritePath = './src/img/sprite/';
+
 
 
 const buildProd = (done) => {
@@ -78,23 +81,20 @@ const serve = (done) => {
 	function html() {
 		return gulp.src(htmlPath)
 			.pipe(browserSync.stream());
-		done();
 	};
 
 	function css() {
 		return gulp.src(cssPath)
 			.pipe(browserSync.stream());
-		done();
 	};
 
 	function js() {
 		return gulp.src(jsPath)
 			.pipe(browserSync.stream());
-		done();
 	};
 
 	function sassToCss() {
-		gulp.src(sassToCssPath)
+		return gulp.src(sassToCssPath)
 			.pipe(sass({
 				errorLogToConsole: true
 			}))
@@ -105,7 +105,6 @@ const serve = (done) => {
 			}))
 			.pipe(gulp.dest("src/css"))
 			.pipe(browserSync.stream());
-		done();
 	};
 
 	function run() {
@@ -134,7 +133,47 @@ gulp.task("clean", () => {
 	return del("./**/.gitkeep");
 });
 
+const spriteConfig = {
+	shape: { 
+		id: { whitespace: '-' }
+	},
+	svg: {
+		xmlDeclaration: false,
+		dimensionAttributes: false,
+		transform: [
+			function(minifySprite) {
+				const splitSprite = minifySprite.match(/<.+?>/gi);
+				let unminifySprite;
+				unminifySprite = splitSprite
+					.map(line => {
+						if (line.includes('<path')) return '\n\t\t' + line;
+						else if (line.match(/<\/?symbol/gi)) return '\n\t' + line;
+						else if (line.includes('</svg>')) return '\n' + line;
+						else return line;
+					})
+					.join('')
+				return unminifySprite;
+			}
+		]
+	},
+	mode: {
+		symbol: {
+			prefix: '.icon-',
+			bust: false,
+			render: { scss: true },
+			// example: { dest: 'sprite.html' },
+		}
+	}
+};
+
+
+gulp.task("sprite", () => {
+	return gulp.src(spritePath + '*.svg')
+		.pipe(svgSprite(spriteConfig))
+		.pipe(gulp.dest(spritePath))
+})
 
 gulp.task("buildProd", buildProd)
 gulp.task("default", serve);
+
 
