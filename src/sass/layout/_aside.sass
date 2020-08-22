@@ -1,5 +1,6 @@
 $aside-bg: $dark
 $aside-active-bg: $red
+$aside-icon-size: 40px
 
 .aside
 	background: $aside-bg
@@ -18,13 +19,14 @@ $aside-active-bg: $red
 	&__link
 		display: flex
 		align-items: center
-		padding: 5px 10px
+		padding: 5px 15px
+		height: 54px
 	
 	&__icon
 		fill: white
-		min-width: 50px
-		width: 50px
-		height: 50px
+		min-width: $aside-icon-size
+		width: $aside-icon-size
+		height: $aside-icon-size
 		margin-right: 20px
 
 	&__text

@@ -7,23 +7,44 @@ header
 	width: 100%
 	height: $header-height
 	position: fixed
-	z-index: 1
+	z-index: 2
 
 $aside-width: 70px
 $aside-width-expanded: 310px
-	
+$aside-time-animation: .4s
+
+%expanded-aside
+	width: $aside-width-expanded
+	transition: width $aside-time-animation
+
+%padding-top
+	padding-top: $header-height
+
 aside
+	@extend %padding-top
 	position: fixed
 	width: $aside-width
-	padding-top: $header-height
-	transition: width $aside-time-animation
 	height: 100%
+	transition: width $aside-time-animation
+	z-index: 1
+
 	&:hover
-		width: $aside-width-expanded
-		transition: width $aside-time-animation
-		+ main
-			padding-left: $aside-width-expanded
-			transition: padding $aside-time-animation
+		@extend %expanded-aside
+
+	&:hover + main
+		padding-left: $aside-width-expanded
+		transition: padding $aside-time-animation
+
+.submenu
+	@extend %padding-top
+	position: fixed
+	width: 440px
+	height: 100%
+	left: $aside-width-expanded
+	background: $grey-100
+	
+	&:hover aside
+		@extend %expanded-aside
 
 main
 	padding: $header-height 0 0 $aside-width

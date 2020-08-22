@@ -1,0 +1,32 @@
+.noUi-target
+	cursor: pointer
+	
+	:focus
+		outline: none
+
+.noUi-horizontal
+	height: 6px
+
+.noUi-connect
+	background: $red
+
+.noUi-base
+	background: $grey-400
+
+.noUi-horizontal .noUi-handle
+	top: -5px
+	right: -7px
+	width: 14px
+	height: 14px
+	background: $red
+	border: 2px solid $grey-200
+	border-radius: 50%
+	box-shadow: unset
+	cursor: pointer
+	transition: transform .1s
+	
+	&:before, &:after
+		content: none
+	
+	&:hover
+		transform: scale(1.1)

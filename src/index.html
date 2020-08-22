@@ -16,6 +16,7 @@
 
 	<!-- build:stylesheet -->
 	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/nouislider.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<!-- endbuild -->
 </head>
@@ -180,8 +181,644 @@
 				</ul>
 			</nav>
 		</aside>
-		<!-- <div class="submenu"></div> -->
+
+		<div class="submenu" style="display: none;">
+
+			<!-- * Мягкая мебель -->
+			<!-- <div class="submenu__container">
+				<div class="submenu__title">Мягкая мебель</div>
+				<button class="submenu__close">Закрыть</button>
+				<ul class="submenu__categories" id="soft-furniture">
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-modular-sofas">
+								<use xlink:href="./img/svg/categories-sprite.svg#modular-sofas"></use>
+							</svg>
+							<div class="submenu__text">Диваны модульные</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-childrens-sofas">
+								<use xlink:href="./img/svg/categories-sprite.svg#childrens-sofas"></use>
+							</svg>
+							<div class="submenu__text">Диваны детские</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-horeca-sofas">
+								<use xlink:href="./img/svg/categories-sprite.svg#horeca-sofas"></use>
+							</svg>
+							<div class="submenu__text">Диваны HoReCa</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-sofas-sets">
+								<use xlink:href="./img/svg/categories-sprite.svg#sofas-sets"></use>
+							</svg>
+							<div class="submenu__text">Диваны наборы</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-straight-sofas">
+								<use xlink:href="./img/svg/categories-sprite.svg#straight-sofas"></use>
+							</svg>
+							<div class="submenu__text">Прямые диваны</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-corner-sofas">
+								<use xlink:href="./img/svg/categories-sprite.svg#corner-sofas"></use>
+							</svg>
+							<div class="submenu__text">Угловые диваны</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-armchairs">
+								<use xlink:href="./img/svg/categories-sprite.svg#armchairs"></use>
+							</svg>
+							<div class="submenu__text">Кресла</div>
+						</a>
+					</li>
+				</ul>
+			</div> -->
+
+			<!-- * Гостиная -->
+			<!-- ! доверстать, когда дорисуют макет! -->
+			<!-- <div class="submenu__container">
+				<div class="submenu__title">Гостиная</div>
+				<button class="submenu__close">Закрыть</button>
+				<ul class="submenu__categories submenu__categories--wide">
+					<li class="submenu__item"> 
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-living-room-complexes">
+								<use xlink:href="./img/svg/categories-sprite.svg#living-room-complexes"></use>
+							</svg>
+							<div class="submenu__text">Гостиные готовые комплекты</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-living-room-complexes">
+								<use xlink:href="./img/svg/categories-sprite.svg#living-room-modules"></use>
+							</svg>
+							<div class="submenu__text">Гостиные модульные</div>
+						</a>
+					</li>
+				</ul>
+			</div> -->
+
+			<!-- * Прихожие -->
+			<!-- <div class="submenu__container">
+				<div class="submenu__title">Прихожие</div>
+				<button class="submenu__close">Закрыть</button>
+				<ul class="submenu__categories" id="soft-furniture">
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-hallway-complexes">
+								<use xlink:href="./img/svg/categories-sprite.svg#hallway-complexes"></use>
+							</svg>
+							<div class="submenu__text">Прихожие готовые комплекты</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-hallways-modular">
+								<use xlink:href="./img/svg/categories-sprite.svg#hallways-modular"></use>
+							</svg>
+							<div class="submenu__text">Прихожие модульные</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-hallway-hangers">
+								<use xlink:href="./img/svg/categories-sprite.svg#hallway-hangers"></use>
+							</svg>
+							<div class="submenu__text">Вешалки</div>
+						</a>
+					</li>
+				</ul>
+			</div> -->
+
+			<!-- * Спальня -->
+			<!-- <div class="submenu__container">
+				<div class="submenu__title">Спальня</div>
+				<button class="submenu__close">Закрыть</button>
+				<ul class="submenu__categories" id="soft-furniture">
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-bedroom-modular">
+								<use xlink:href="./img/svg/categories-sprite.svg#bedroom-modular"></use>
+							</svg>
+							<div class="submenu__text">Спальни модульные</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-bedroom-complexes">
+								<use xlink:href="./img/svg/categories-sprite.svg#bedroom-complexes"></use>
+							</svg>
+							<div class="submenu__text">Готовые комплекты</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-bedroom-beds">
+								<use xlink:href="./img/svg/categories-sprite.svg#bedroom-beds"></use>
+							</svg>
+							<div class="submenu__text">Кровати</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-bedroom-mattresses">
+								<use xlink:href="./img/svg/categories-sprite.svg#bedroom-mattresses"></use>
+							</svg>
+							<div class="submenu__text">Матрасы</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-bedrooms-covers">
+								<use xlink:href="./img/svg/categories-sprite.svg#bedrooms-covers"></use>
+							</svg>
+							<div class="submenu__text">Наматрасники (чехлы)</div>
+						</a>
+					</li>
+				</ul>
+			</div> -->
+
+			<!-- * Тумбы и комоды -->
+			<!-- <div class="submenu__container">
+				<div class="submenu__title">Тумбы и комоды</div>
+				<button class="submenu__close">Закрыть</button>
+				<ul class="submenu__categories" id="soft-furniture">
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-pedestals">
+								<use xlink:href="./img/svg/categories-sprite.svg#pedestals"></use>
+							</svg>
+							<div class="submenu__text">Комоды</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-pedestals-TV">
+								<use xlink:href="./img/svg/categories-sprite.svg#pedestals-TV"></use>
+							</svg>
+							<div class="submenu__text">Тумбы для обуви</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-pedestals-bedside">
+								<use xlink:href="./img/svg/categories-sprite.svg#pedestals-bedside"></use>
+							</svg>
+							<div class="submenu__text">Тумбы офисные</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-pedestals-office">
+								<use xlink:href="./img/svg/categories-sprite.svg#pedestals-office"></use>
+							</svg>
+							<div class="submenu__text">Тумбы прикроватные</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-pedestals-shoe">
+								<use xlink:href="./img/svg/categories-sprite.svg#pedestals-shoe"></use>
+							</svg>
+							<div class="submenu__text">Тумбы ТV</div>
+						</a>
+					</li>
+				</ul>
+			</div> -->
+
+			<!-- * Шкафы и стеллажи -->
+			<!-- ! в макете в строку помещается только 2 айтема -->
+			<!-- <div class="submenu__container">
+				<div class="submenu__title">Шкафы и стеллажи</div>
+				<button class="submenu__close">Закрыть</button>
+				<ul class="submenu__categories" id="soft-furniture">
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-cabinets-compartment-1">
+								<use xlink:href="./img/svg/categories-sprite.svg#cabinets-compartment-1"></use>
+							</svg>
+							<div class="submenu__text">Шафы купе</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-cabinets-compartment-2">
+								<use xlink:href="./img/svg/categories-sprite.svg#cabinets-compartment-2"></use>
+							</svg>
+							<div class="submenu__text">Шафы купе</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-cabinets-shelves">
+								<use xlink:href="./img/svg/categories-sprite.svg#cabinets-shelves"></use>
+							</svg>
+							<div class="submenu__text">Полки</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-cabinets-shelving">
+								<use xlink:href="./img/svg/categories-sprite.svg#cabinets-shelving"></use>
+							</svg>
+							<div class="submenu__text">Стеллажи</div>
+						</a>
+					</li>
+				</ul>
+			</div> -->
+
+			<!-- * Кухня -->
+			<!-- <div class="submenu__container">
+				<div class="submenu__title">Кухня</div>
+				<button class="submenu__close">Закрыть</button>
+				<ul class="submenu__categories" id="soft-furniture">
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-kitchen-bench">
+								<use xlink:href="./img/svg/categories-sprite.svg#kitchen-bench"></use>
+							</svg>
+							<div class="submenu__text">Кухни готовые комплекты</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-kitchen-complexes">
+								<use xlink:href="./img/svg/categories-sprite.svg#kitchen-complexes"></use>
+							</svg>
+							<div class="submenu__text">Кухни модульные</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-kitchen-countertops">
+								<use xlink:href="./img/svg/categories-sprite.svg#kitchen-countertops"></use>
+							</svg>
+							<div class="submenu__text">Планировщик кухонь</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-kitchen-fittings">
+								<use xlink:href="./img/svg/categories-sprite.svg#kitchen-fittings"></use>
+							</svg>
+							<div class="submenu__text">Кухонные углы и лавки</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-kitchen-mixer">
+								<use xlink:href="./img/svg/categories-sprite.svg#kitchen-mixer"></use>
+							</svg>
+							<div class="submenu__text">Мойки</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-kitchen-modules">
+								<use xlink:href="./img/svg/categories-sprite.svg#kitchen-modules"></use>
+							</svg>
+							<div class="submenu__text">Смесители</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-kitchen-panels">
+								<use xlink:href="./img/svg/categories-sprite.svg#kitchen-panels"></use>
+							</svg>
+							<div class="submenu__text">Фурнитура для кухни</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-kitchen-plinths">
+								<use xlink:href="./img/svg/categories-sprite.svg#kitchen-plinths"></use>
+							</svg>
+							<div class="submenu__text">Стеновые панели</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-kitchen-scheduler">
+								<use xlink:href="./img/svg/categories-sprite.svg#kitchen-scheduler"></use>
+							</svg>
+							<div class="submenu__text">Столешницы</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-kitchen-sink">
+								<use xlink:href="./img/svg/categories-sprite.svg#kitchen-sink"></use>
+							</svg>
+							<div class="submenu__text">Торцевые планки</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-kitchen-skirting-boards">
+								<use xlink:href="./img/svg/categories-sprite.svg#kitchen-skirting-boards"></use>
+							</svg>
+							<div class="submenu__text">Плинтуса</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-kitchen-slats">
+								<use xlink:href="./img/svg/categories-sprite.svg#kitchen-slats"></use>
+							</svg>
+							<div class="submenu__text">Цоколи</div>
+						</a>
+					</li>
+				</ul>
+			</div> -->
+
+			<!-- * Столы -->
+			<!-- <div class="submenu__container">
+				<div class="submenu__title">Столы</div>
+				<button class="submenu__close">Закрыть</button>
+				<ul class="submenu__categories" id="soft-furniture">
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-tables-book">
+								<use xlink:href="./img/svg/categories-sprite.svg#tables-book"></use>
+							</svg>
+							<div class="submenu__text">Журнальные и трансформеры</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-tables-coffee">
+								<use xlink:href="./img/svg/categories-sprite.svg#tables-coffee"></use>
+							</svg>
+							<div class="submenu__text">Компьютерные и офисные</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-tables-computer">
+								<use xlink:href="./img/svg/categories-sprite.svg#tables-computer"></use>
+							</svg>
+							<div class="submenu__text">Столы кухонные</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-tables-kitchen">
+								<use xlink:href="./img/svg/categories-sprite.svg#tables-kitchen"></use>
+							</svg>
+							<div class="submenu__text">Тумбы и книжные</div>
+						</a>
+					</li>
+				</ul>
+			</div> -->
+
+			<!-- * Стулья и табуреты -->
+			<!-- <div class="submenu__container">
+				<div class="submenu__title">Стулья и табуреты</div>
+				<button class="submenu__close">Закрыть</button>
+				<ul class="submenu__categories" id="soft-furniture">
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-chairs-bar">
+								<use xlink:href="./img/svg/categories-sprite.svg#chairs-bar"></use>
+							</svg>
+							<div class="submenu__text">Компьютерные и офисные</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-chairs-computer">
+								<use xlink:href="./img/svg/categories-sprite.svg#chairs-computer"></use>
+							</svg>
+							<div class="submenu__text">Стулья кухонные</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-chairs-kitchen">
+								<use xlink:href="./img/svg/categories-sprite.svg#chairs-kitchen"></use>
+							</svg>
+							<div class="submenu__text">Cтулья барные</div>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<svg class="submenu__icon icon-chairs-stools">
+								<use xlink:href="./img/svg/categories-sprite.svg#chairs-stools"></use>
+							</svg>
+							<div class="submenu__text">Табуреты</div>
+						</a>
+					</li>
+				</ul>
+			</div> -->
+
+			<!-- * Услуги -->
+			<!-- <div class="submenu__container">
+				<div class="submenu__title">Услуги</div>
+				<button class="submenu__close">Закрыть</button>
+				<ul class="submenu__info">
+					<li class="submenu__item">
+						<a href="#" class="submenu__text">Доставка</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__text">Сборка</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__text">Рассрочка и кредит</a>
+					</li>
+				</ul>
+			</div> -->
+
+			<!-- * Покупателю -->
+			<!-- <div class="submenu__container">
+				<div class="submenu__title">Покупателю</div>
+				<button class="submenu__close">Закрыть</button>
+				<ul class="submenu__info">
+					<li class="submenu__item">
+						<a href="#" class="submenu__text">Гарантия</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__text">Обмен и возврат</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__text">Публичная офёрта</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__text">Политика обработки персональных данных</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__text">Согласие на обработку персональных данных</a>
+					</li>
+				</ul>
+			</div> -->
+
+			<!-- * Партнёру -->
+			<!-- <div class="submenu__container">
+				<div class="submenu__title">Партнёру</div>
+				<button class="submenu__close">Закрыть</button>
+				<ul class="submenu__info">
+					<li class="submenu__item">
+						<a href="#" class="submenu__text">Гостиницам</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__text">Кафе и ресторанам</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__text">Мебельным магазинам</a>
+					</li>
+				</ul>
+			</div> -->
+
+			<!-- * О компании -->
+			<!-- <div class="submenu__container">
+				<div class="submenu__title">О компании</div>
+				<button class="submenu__close">Закрыть</button>
+				<ul class="submenu__info">
+					<li class="submenu__item">
+						<a href="#" class="submenu__text">Адреса магазинов</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__text">Контакты</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__text">О компании</a>
+					</li>
+				</ul>
+			</div> -->
+
+		</div>
+		
 		<main class="main-content">
+			<section style="height: 100vh;">
+				<div class="filter">
+					<input id="filter-tab-1" type="radio" name="filter">
+					<input id="filter-tab-2" type="radio" name="filter">
+					<input id="filter-tab-3" type="radio" name="filter">
+	
+					<div id="filter-tabs" class="filter-tabs">
+						<span class="filter-tab__legend">Подобрать по парметрам:</span>
+						<label id="filter-tab-label-1" for="filter-tab-1" class="filter-tab__item">Сортирировать по
+							<svg class="filter-tab__icon-arrow icon-arrow">
+								<use xlink:href="img/svg/sprite.svg#arrow"></use>
+							</svg>
+						</label>
+						<label id="filter-tab-label-2" for="filter-tab-2" class="filter-tab__item">Характеристики
+							<svg class="filter-tab__icon-arrow icon-arrow">
+								<use xlink:href="img/svg/sprite.svg#arrow"></use>
+							</svg>
+						</label>
+						<label id="filter-tab-label-3" for="filter-tab-3" class="filter-tab__item">Состав
+							<svg class="filter-tab__icon-arrow icon-arrow">
+								<use xlink:href="img/svg/sprite.svg#arrow"></use>
+							</svg>
+						</label>
+					</div>
+	
+					<ul id="filter-tabs-content" class="filter-content">
+						<li id="tab-content-1" class="filter-sorting">
+							<input id="popularity" class="filter-sorting__input" type="radio" name="sort-by">
+							<label for="popularity" class="filter-sorting__label">Популярности</label>
+							<input id="ascending " class="filter-sorting__input" type="radio" name="sort-by">
+							<label for="ascending " class="filter-sorting__label">Цене (сначала дешёвые)</label>
+							<input id="descending" class="filter-sorting__input" type="radio" name="sort-by">
+							<label for="descending" class="filter-sorting__label">Цене (сначала дорогие)</label>
+						</li>
+						<li id="tab-content-2" class="filter-specific">
+							<div class="filter-specific__item filter-range">
+								<div class="filter-specific__title">Базовый тип</div>
+								<label class="filter-specific__label">
+									<input class="filter-specific__input" value="0">
+								</label>
+								<label class="filter-specific__label">
+									<input class="filter-specific__input" value="13 000">
+								</label>
+								<div class="filter-specific__slider-range" data-min="0" data-max="44000" data-step="100"></div>
+							</div>
+							<div class="filter-specific__item filter-range">
+								<div class="filter-specific__title">Ширина, см</div>
+								<label class="filter-specific__label">
+									<input class="filter-specific__input">
+								</label>
+								<label class="filter-specific__label">
+									<input class="filter-specific__input">
+								</label>
+								<div class="filter-specific__slider-range" data-min="0" data-max="300" data-step="5"></div>
+							</div>
+							<div class="filter-specific__item">
+								<div class="filter-specific__title">Механизм</div>
+								<select name="mechanism" class="filter-specific__select">
+									<option selected class="filter-specific__option">Не выбрано</option>
+									<option class="filter-specific__option">1</option>
+									<option class="filter-specific__option">2</option>
+									<option class="filter-specific__option">3</option>
+								</select>
+							</div>
+							<div class="filter-specific__item">
+								<div class="filter-specific__title">Наполнитель</div>
+								<select name="mechanism" class="filter-specific__select">
+									<option selected class="filter-specific__option">Не выбрано</option>
+									<option class="filter-specific__option">1</option>
+									<option class="filter-specific__option">2</option>
+									<option class="filter-specific__option">3</option>
+								</select>
+							</div>
+							<div class="filter-specific__item filter-range">
+								<div class="filter-specific__title">Длина, см</div>
+								<label class="filter-specific__label">
+									<input class="filter-specific__input">
+								</label>
+								<label class="filter-specific__label">
+									<input class="filter-specific__input">
+								</label>
+								<div class="filter-specific__slider-range" data-min="0" data-max="350" data-step="5"></div>
+							</div>
+							<div class="filter-specific__item filter-range">
+								<div class="filter-specific__title">Глубина спального места, см</div>
+								<label class="filter-specific__label">
+									<input class="filter-specific__input">
+								</label>
+								<label class="filter-specific__label">
+									<input class="filter-specific__input">
+								</label>
+								<div class="filter-specific__slider-range" data-min="0" data-max="400" data-step="5"></div>
+							</div>
+							<div class="filter-specific__item">
+								<div class="filter-specific__title">Производитель</div>
+								<select name="mechanism" class="filter-specific__select">
+									<option selected class="filter-specific__option">Не выбрано</option>
+									<option class="filter-specific__option">1</option>
+									<option class="filter-specific__option">2</option>
+									<option class="filter-specific__option">3</option>
+								</select>
+							</div>
+							<div class="filter-specific__item">
+								<div class="filter-specific__title">Цвет</div>
+								<select name="mechanism" class="filter-specific__select">
+									<option selected class="filter-specific__option">Не выбрано</option>
+									<option class="filter-specific__option">1</option>
+									<option class="filter-specific__option">2</option>
+									<option class="filter-specific__option">3</option>
+								</select>
+							</div>
+						</li>
+						<li id="tab-content-3" class="filter-composition">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam ex corporis, eius nostrum consequuntur impedit iste consequatur temporibus iure at natus delectus tempora recusandae porro explicabo? Rerum itaque officia repellendus dignissimos tenetur sit assumenda, neque minima natus perspiciatis omnis numquam quo. Molestiae dolore nihil ipsa expedita nam iure aliquid commodi.</li>
+					</ul>
+				</div>
+			</section>
 			<section style="height: 100vh; background: rgb(255, 151, 151);">section</section>
 			<section style="height: 200px; background: rgb(255, 246, 167);">section</section>
 		</main>
@@ -268,7 +905,9 @@
 	<!-- ./popup-notification -->
 
 	
-	<!-- <script src="js/script.js"></script> -->
+	<!-- ! try plug in with include in script.js -->
+	<script src="js/nouislider.min.js"></script> 
+	<script src="js/script.js"></script>
 </body>
 
 </html>

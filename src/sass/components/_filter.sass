@@ -1,0 +1,154 @@
+$tab-number: 3
+@for $i from 1 through $tab-number
+	// toggling tabs
+	#filter-tab-#{$i}:checked ~ #filter-tabs-content #tab-content-#{$i}
+		display: flex
+	
+	#filter-tab-#{$i}:checked ~ #filter-tabs #filter-tab-label-#{$i}
+		color: red
+		fill: red
+
+.filter
+	max-width: 1134px
+	color: $black
+	margin: 0 auto
+
+	& > input
+		display: none
+	
+.filter-tabs
+	background: $grey-200
+	padding: 22px
+
+.filter-tab__legend
+	@include font-size(18px)
+	font-weight: bold
+	margin: 0 16px 0 0
+	
+.filter-tab__item
+	@include font-size(15px)
+	position: relative
+	padding: 22px 26px 22px 0
+	font-weight: 600
+	margin: 0 30px 0 0
+	cursor: pointer
+
+.filter-tab__icon-arrow
+	position: absolute
+	right: 6px
+	top: 50%
+	transform: translateY(-50%)
+
+.filter-content 
+	border: 2px solid $grey-200
+
+	& > li:nth-of-type(n)
+		display: none
+
+.filter-sorting
+	padding: 13px 24px 
+
+
+.filter-sorting__input
+	display: none
+
+	&:checked + label:before
+		border-color: $red
+
+	&:checked + label:after
+		display: block
+	
+.filter-sorting__label
+	@include font-size(14px)
+	position: relative
+	margin: 0 30px 0 0
+	padding: 13px 0 13px 30px
+	cursor: pointer
+
+	&:before
+		content: ''
+		position: absolute
+		width: 22px
+		height: 22px
+		border: 1px solid $grey-300
+		left: 0
+		top: 50%
+		transform: translateY(-50%)
+		
+	&:after
+		content: ''
+		position: absolute
+		display: none
+		width: 12px
+		height: 6px
+		border-left: 2px solid $red
+		border-bottom: 2px solid $red
+		left: 5px
+		top: 50%
+		transform: translateY(-80%) rotate(-45deg)
+
+.filter-specific
+	flex-wrap: wrap
+	padding: 26px 24px
+
+.filter-specific__item
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	width: 100%
+	max-width: 228px
+	margin: 0 46px 24px 0
+
+	&:nth-of-type(4n)
+		margin: 0 0 24px 0
+
+	&:nth-last-of-type(-n+4)
+		margin-bottom: 0
+
+.filter-specific__title
+	@include font-size(16px)
+	width: 100%
+	margin: 0 0 12px 0
+
+.filter-specific__label
+	position: relative
+
+	&:first-of-type:before
+		content: 'от'
+
+	&:last-of-type:before
+		content: 'до'
+
+	&:before
+		// todo: сделать для псевдоклассов шаблон
+		@include font-size(13px)
+		color: $black
+		opacity: 0.5
+		position: absolute
+		left: 12px
+		top: 60%
+		transform: translateY(-60%)
+		width: 18px
+		height: 14px
+
+.filter-specific__input
+	@include font-size(13px)
+	border: 1px solid $grey-400
+	border-radius: 3px
+	padding: 6px 6px 6px 35px
+	max-width: 100px
+
+.filter-specific__slider-range
+	width: 100%
+	margin: 20px 5px 0
+	
+.filter-specific__select
+	position: relative
+	width: 224px
+	padding: 16px 50px 16px 16px
+	border: 1px solid $grey-400
+	appearance: none
+	background: url('../img/svg/arrow.svg') no-repeat 90% 50%/auto 25%
+
+.filter-composition
+	padding: 26px 24px
