@@ -396,7 +396,8 @@ h1, h2, h3, h4 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 100%; }
+  width: 100%;
+  margin: 0 0 30px; }
 
 .search__title {
   font-weight: bold;
@@ -438,7 +439,7 @@ h1, h2, h3, h4 {
 .search-navigation__item {
   font-size: 16px;
   position: relative;
-  padding: 20px 0 20px 40px;
+  padding: 10px 0 10px 40px;
   font-weight: 600;
   color: #202020;
   cursor: pointer;
@@ -455,7 +456,7 @@ h1, h2, h3, h4 {
   .search-navigation__item--cart:before {
     content: url("../img/svg/cart.svg"); }
   .search-navigation__item--cart {
-    padding: 20px 20px 20px 35px; }
+    padding: 10px 20px 10px 35px; }
   .search-navigation__item:nth-child(n):not(:last-child) {
     margin: 0 24px 0 0; }
 
@@ -546,9 +547,7 @@ h1, h2, h3, h4 {
   fill: red; }
 
 .filter {
-  max-width: 1134px;
-  color: #202020;
-  margin: 0 auto; }
+  color: #202020; }
   .filter > input {
     display: none; }
 
@@ -693,7 +692,46 @@ h1, h2, h3, h4 {
 .filter-composition {
   padding: 26px 24px; }
 
-.page {
+.section {
+  padding: 30px 0; }
+  @media screen and (min-width: 480px) and (max-width: 991px) {
+    .section {
+      padding: 20px 0; } }
+  @media screen and (max-width: 479px) {
+    .section {
+      padding: 10px 0; } }
+
+@media screen and (max-width: 479px) {
+  section {
+    padding-left: 15px !important;
+    padding-right: 15px !important; } }
+
+@media screen and (min-width: 480px) and (max-width: 575px) {
+  section {
+    padding-left: calc(50% - 209px) !important;
+    padding-right: calc(50% - 209px) !important; } }
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  section {
+    padding-left: calc(50% - 272.5px) !important;
+    padding-right: calc(50% - 272.5px) !important; } }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  section {
+    padding-left: calc(50% - 368.5px) !important;
+    padding-right: calc(50% - 368.5px) !important; } }
+
+@media screen and (min-width: 992px) and (max-width: 1169px) {
+  section {
+    padding-left: calc(50% - 480.5px) !important;
+    padding-right: calc(50% - 480.5px) !important; } }
+
+@media screen and (min-width: 1170px) {
+  section {
+    padding-left: calc(50% - 570px) !important;
+    padding-right: calc(50% - 570px) !important; } }
+
+body {
   min-height: 100vh; }
 
 header {
