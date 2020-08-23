@@ -1,0 +1,81 @@
+.search
+	display: flex
+	align-items: center
+	width: 100%
+
+.search__title
+	font-weight: bold
+	color: $black
+	margin: 0 14px 0 0
+	opacity: .8
+
+.search__field
+	position: relative
+	max-width: 702px
+	width: 100%
+	margin: 0 30px 0 0
+
+	&:placeholder
+		@include font-size(15px)
+		font-family: 'Lato', sans-serif
+		color: $gray-500
+
+	&:after
+		content: url('../img/svg/magnifying-glass.svg')
+		position: absolute
+		right: 20px
+		top: 50%
+		transform: translateY(-50%)
+		cursor: pointer
+
+.search__input
+	padding: 12px 60px 12px 30px
+	width: 100%
+	color: $black
+	background: $gray-200
+	border-radius: 2px
+	
+.search-navigation
+	display: flex
+
+.search-navigation__item
+	@include font-size(16px)
+	position: relative
+	padding: 20px 0 20px 40px
+	font-weight: 600
+	color: $black
+	cursor: pointer
+	opacity: 0.8
+
+	&--account:before, &--cart:before
+		position: absolute
+		left: 5px
+		top: 50%
+		transform: translateY(-50%)
+	
+	&--account:before
+		content: url('../img/svg/account.svg')
+	
+	&--cart:before
+		content: url('../img/svg/cart.svg')
+
+	&--cart
+		padding: 20px 20px 20px 35px
+
+	&:nth-child(n):not(:last-child) 
+		margin: 0 24px 0 0
+
+.search-navigation__counter
+	@include font-size(12px)
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 20px
+	height: 20px
+	border-radius: 50%
+	color: #fff
+	background: $red
+	position: absolute
+	right: 0
+	top: 30%
+	transform: translateY(-50%)

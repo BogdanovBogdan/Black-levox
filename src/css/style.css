@@ -389,6 +389,99 @@ h1, h2, h3, h4 {
   width: 10px;
   height: 6px; }
 
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%; }
+
+.search__title {
+  font-weight: bold;
+  color: #202020;
+  margin: 0 14px 0 0;
+  opacity: .8; }
+
+.search__field {
+  position: relative;
+  max-width: 702px;
+  width: 100%;
+  margin: 0 30px 0 0; }
+  .search__field:placeholder {
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    color: #919191; }
+  .search__field:after {
+    content: url("../img/svg/magnifying-glass.svg");
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer; }
+
+.search__input {
+  padding: 12px 60px 12px 30px;
+  width: 100%;
+  color: #202020;
+  background: #f2f2f2;
+  border-radius: 2px; }
+
+.search-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.search-navigation__item {
+  font-size: 16px;
+  position: relative;
+  padding: 20px 0 20px 40px;
+  font-weight: 600;
+  color: #202020;
+  cursor: pointer;
+  opacity: 0.8; }
+  .search-navigation__item--account:before, .search-navigation__item--cart:before {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  .search-navigation__item--account:before {
+    content: url("../img/svg/account.svg"); }
+  .search-navigation__item--cart:before {
+    content: url("../img/svg/cart.svg"); }
+  .search-navigation__item--cart {
+    padding: 20px 20px 20px 35px; }
+  .search-navigation__item:nth-child(n):not(:last-child) {
+    margin: 0 24px 0 0; }
+
+.search-navigation__counter {
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #fff;
+  background: #ed2024;
+  position: absolute;
+  right: 0;
+  top: 30%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
 .noUi-target {
   cursor: pointer;
   focus-outline: none; }
